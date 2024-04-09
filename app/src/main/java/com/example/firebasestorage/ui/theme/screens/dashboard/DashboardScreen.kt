@@ -146,7 +146,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.about),
+                                painter = painterResource(id = R.drawable.electronics),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
