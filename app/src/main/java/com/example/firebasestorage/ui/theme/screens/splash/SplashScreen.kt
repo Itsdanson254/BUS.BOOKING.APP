@@ -42,16 +42,24 @@ Column(
     }
 
 
-    Image(painter = painterResource(id = com.example.firebasestorage.R.drawable.person),
+    Image(painter = painterResource(id = com.example.firebasestorage.R.drawable.amazon),
         contentDescription = "",
         modifier = Modifier.size(200.dp))
 
     Text(
-        text = "Shopify",
-        fontSize = 40.sp,
-        fontFamily = FontFamily.Cursive,
+        text = "AMAZON",
+        fontSize = 50.sp,
         fontWeight = FontWeight.ExtraBold,
         modifier = Modifier.padding(start = 5.dp, end = 5.dp))
+
+    Text(
+        text = "THE MOST RELIABLE SHOPPING APP",
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier.padding(start = 5.dp, end = 5.dp))
+
+
+
 }
     
     
