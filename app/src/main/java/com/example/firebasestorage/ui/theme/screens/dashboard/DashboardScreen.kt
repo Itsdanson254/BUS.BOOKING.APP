@@ -78,7 +78,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.attt4),
+                                painter = painterResource(id = R.drawable.collection),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -132,7 +132,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.attt7),
+                                painter = painterResource(id = R.drawable.attt4),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }

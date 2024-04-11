@@ -66,7 +66,7 @@ fun ClothingScreen(navController: NavHostController) {
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = 35.sp,
                     textAlign = TextAlign.Right,
-                    color = Color.Magenta,
+                    color = Color.Black,
 
                 )
 
@@ -117,7 +117,7 @@ fun ClothingScreen(navController: NavHostController) {
 
                             Text(text = "Ksh. 500", textAlign = TextAlign.Center)
 
-                           OutlinedButton(onClick = { val simToolKitLaunchIntent =
+                         TextButton(onClick = { val simToolKitLaunchIntent =
                                mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
                                simToolKitLaunchIntent?.let { mContext.startActivity(it)} }, ){
                                 Text(text = "Pay", color = Color.Blue)
