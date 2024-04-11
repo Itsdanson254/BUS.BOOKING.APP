@@ -1,6 +1,7 @@
 package com.example.firebasestorage.ui.theme.screens.dashboard
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -27,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.firebasestorage.R
+import com.example.firebasestorage.navigation.ROUT_CLOTHING
 import com.example.firebasestorage.ui.theme.Blue1
 
 @Composable
@@ -65,11 +67,18 @@ fun DashboardScreen(navController: NavHostController) {
         Column (modifier = Modifier.padding(start = 20.dp)){
 
             Row {
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)) {
+                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
+
+                    //CODE FOR NAVIGATION FROM DASHBOARD
+                    .clickable {
+                        navController.navigate(ROUT_CLOTHING)
+                    })
+                //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
+                {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.clothing),
+                                painter = painterResource(id = R.drawable.attt4),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -123,7 +132,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.about),
+                                painter = painterResource(id = R.drawable.attt7),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -162,7 +171,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.about),
+                                painter = painterResource(id = R.drawable.grocery),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }

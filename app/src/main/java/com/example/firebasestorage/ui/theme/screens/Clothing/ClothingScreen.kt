@@ -12,7 +12,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Card
+import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.material.TopAppBar
@@ -52,7 +54,7 @@ fun ClothingScreen(navController: NavHostController) {
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(id = R.drawable.attt5),
+                painter = painterResource(id = R.drawable.collection),
                 contentDescription = "",
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop
@@ -64,19 +66,17 @@ fun ClothingScreen(navController: NavHostController) {
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = 35.sp,
                     textAlign = TextAlign.Right,
-                    color = Color.White,
+                    color = Color.Magenta,
 
                 )
-
-
-
 
             }
 
         }
         Spacer(modifier = Modifier.height(10.dp))
 
-        Column (modifier = Modifier.horizontalScroll(rememberScrollState())
+        Column (modifier = Modifier
+            .verticalScroll(rememberScrollState())
             .padding(start = 20.dp)){
             Row {
 
@@ -117,10 +117,9 @@ fun ClothingScreen(navController: NavHostController) {
 
                             Text(text = "Ksh. 500", textAlign = TextAlign.Center)
 
-                            TextButton(onClick = { val simToolKitLaunchIntent =
-                                mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                                simToolKitLaunchIntent?.let { mContext.startActivity(it)} },
-                            ) {
+                           OutlinedButton(onClick = { val simToolKitLaunchIntent =
+                               mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                               simToolKitLaunchIntent?.let { mContext.startActivity(it)} }, ){
                                 Text(text = "Pay", color = Color.Blue)
 
                             }
@@ -187,6 +186,7 @@ fun ClothingScreen(navController: NavHostController) {
             //end row1
 
             Spacer(modifier = Modifier.height(3.dp))
+
 
             Row {
 
