@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.firebasestorage'
+    namespace 'com.example.danson'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.firebasestorage"
+        applicationId "com.example.danson"
         minSdk 21
         targetSdk 34
         versionCode 1
