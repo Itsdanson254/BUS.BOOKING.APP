@@ -84,7 +84,7 @@ fun firebaseUI() {
         Spacer(modifier = Modifier.height(10.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.img),
+            painter = painterResource(id = R.drawable.collection),
             contentDescription = "course",
             modifier = Modifier.size(200.dp)
         )

@@ -1,6 +1,8 @@
 package com.example.danson.ui.theme.screens.Clothing
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -32,6 +34,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.danson.ui.theme.Blue1
 import com.example.danson.R
+import com.example.danson.navigation.ROUT_CLOTHING
 
 @Composable
 fun ClothingScreen(navController: NavHostController) {
@@ -51,10 +54,16 @@ fun ClothingScreen(navController: NavHostController) {
                 .height(150.dp),
             contentAlignment = Alignment.Center
         ) {
+            val mContext = LocalContext.current
             Image(
                 painter = painterResource(id = R.drawable.collection),
                 contentDescription = "",
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .clickable {
+                        navController.navigate(ROUT_CLOTHING)
+                        Toast.makeText(mContext,"Go to winter collection !",
+                        Toast.LENGTH_SHORT).show() }
+                    .fillMaxSize(),
                 contentScale = ContentScale.Crop
             )
             Column {
