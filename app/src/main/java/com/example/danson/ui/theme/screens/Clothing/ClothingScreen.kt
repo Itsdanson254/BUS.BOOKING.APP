@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.danson.ui.theme.Blue1
-import com.example.firebasestorage.R
+import com.example.danson.R
 
 @Composable
 fun ClothingScreen(navController: NavHostController) {
