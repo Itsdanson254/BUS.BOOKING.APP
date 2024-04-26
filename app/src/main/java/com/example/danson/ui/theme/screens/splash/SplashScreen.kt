@@ -28,39 +28,39 @@ import kotlinx.coroutines.launch
 @Composable
 fun SplashScreen(navController: NavHostController){
 
-Column(
-    modifier = Modifier.fillMaxSize(),
-    horizontalAlignment = Alignment.CenterHorizontally,
-    verticalArrangement = Arrangement.Center) {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center) {
 
-    val coroutine = rememberCoroutineScope()
-    coroutine.launch {
-        delay(2000)
-        navController.navigate(ROUT_DASHBOARD)
+        val coroutine = rememberCoroutineScope()
+        coroutine.launch {
+            delay(2000)
+            navController.navigate(ROUT_DASHBOARD)
+        }
+
+
+        Image(painter = painterResource(id = com.example.danson.R.drawable.bus1),
+            contentDescription = "",
+            modifier = Modifier.size(200.dp))
+
+        Text(
+            text = "AMAZON",
+            fontSize = 50.sp,
+            fontWeight = FontWeight.ExtraBold,
+            modifier = Modifier.padding(start = 5.dp, end = 5.dp))
+
+        Text(
+            text = "THE MOST RELIABLE SHOPPING APP",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(start = 5.dp, end = 5.dp))
+
+
+
     }
 
 
-    Image(painter = painterResource(id = com.example.danson.R.drawable.amazon),
-        contentDescription = "",
-        modifier = Modifier.size(200.dp))
-
-    Text(
-        text = "AMAZON",
-        fontSize = 50.sp,
-        fontWeight = FontWeight.ExtraBold,
-        modifier = Modifier.padding(start = 5.dp, end = 5.dp))
-
-    Text(
-        text = "THE MOST RELIABLE SHOPPING APP",
-        fontSize = 20.sp,
-        fontWeight = FontWeight.Bold,
-        modifier = Modifier.padding(start = 5.dp, end = 5.dp))
-
-
-
-}
-    
-    
 }
 
 @Preview(showBackground = true, showSystemUi = true)

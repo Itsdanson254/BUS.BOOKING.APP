@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/busicon1"
         android:label="MVVM INTERFACE"
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebasestorage"
@@ -24,7 +24,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="MVVM USER INTERFACE"
+            android:label="TAHMEED BOOKING APP"
             android:theme="@style/Theme.Firebasestorage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

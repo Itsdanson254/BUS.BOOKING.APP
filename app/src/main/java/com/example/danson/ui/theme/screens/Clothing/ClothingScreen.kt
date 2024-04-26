@@ -1,5 +1,4 @@
 package com.example.danson.ui.theme.screens.Clothing
-
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -42,7 +41,7 @@ fun ClothingScreen(navController: NavHostController) {
 
         //Top app bar
         TopAppBar(
-            title = { Text(text = "Amazon Shop") },
+            title = { Text(text = "SUPER PREMIUM BOOKING") },
             backgroundColor = Blue1
         )
         //end of Top app bar
@@ -56,26 +55,19 @@ fun ClothingScreen(navController: NavHostController) {
         ) {
             val mContext = LocalContext.current
             Image(
-                painter = painterResource(id = R.drawable.collection),
+                painter = painterResource(id = R.drawable.bus3),
                 contentDescription = "",
                 modifier = Modifier
                     .clickable {
                         navController.navigate(ROUT_CLOTHING)
                         Toast.makeText(mContext,"Go to winter collection !",
-                        Toast.LENGTH_SHORT).show() }
+                            Toast.LENGTH_SHORT).show() }
                     .fillMaxSize(),
                 contentScale = ContentScale.Crop
             )
             Column {
 
-                androidx.compose.material3.Text(
-                    text = "WINTER COLLECTION.",
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 35.sp,
-                    textAlign = TextAlign.Right,
-                    color = Color.Black,
 
-                )
 
             }
 
@@ -103,7 +95,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.shirt2),
+                                painter = painterResource(id = R.drawable.bus2),
                                 contentDescription = "Shirt",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
@@ -124,9 +116,9 @@ fun ClothingScreen(navController: NavHostController) {
 
                             Text(text = "Ksh. 500", textAlign = TextAlign.Center)
 
-                         TextButton(onClick = { val simToolKitLaunchIntent =
-                               mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
-                               simToolKitLaunchIntent?.let { mContext.startActivity(it)} }, ){
+                            TextButton(onClick = { val simToolKitLaunchIntent =
+                                mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it)} }, ){
                                 Text(text = "Pay", color = Color.Blue)
 
                             }
@@ -155,7 +147,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.sweater),
+                                painter = painterResource(id = R.drawable.bus3),
                                 contentDescription = "Sweater",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
@@ -213,7 +205,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.coat2),
+                                painter = painterResource(id = R.drawable.bus2),
                                 contentDescription = "coat",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
@@ -266,7 +258,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.attt7),
+                                painter = painterResource(id = R.drawable.bus4),
                                 contentDescription = "dress",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
@@ -323,7 +315,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.watch4),
+                                painter = painterResource(id = R.drawable.bus1),
                                 contentDescription = "watch",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
@@ -376,7 +368,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.attt1),
+                                painter = painterResource(id = R.drawable.bus4),
                                 contentDescription = "Suit",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop

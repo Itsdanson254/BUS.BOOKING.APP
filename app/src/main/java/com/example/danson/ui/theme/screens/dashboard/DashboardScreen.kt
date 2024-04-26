@@ -1,5 +1,6 @@
 package com.example.danson.ui.theme.screens.dashboard
 
+
 import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.Image
@@ -40,11 +41,11 @@ fun DashboardScreen(navController: NavHostController) {
 
     Column (modifier = Modifier.fillMaxSize()){
 
-       //topappbar
+        //topappbar
         TopAppBar(
-           title = { Text(text = "Amazon Shop") },
-           backgroundColor = Blue1
-       )
+            title = { Text(text = "Amazon Shop") },
+            backgroundColor = Blue1
+        )
         //end of topappbar
 
         Spacer(modifier = Modifier.height(30.dp))
@@ -59,7 +60,7 @@ fun DashboardScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.width(80.dp))
 
             Image(
-                painter = painterResource(id = R.drawable.amazon),
+                painter = painterResource(id = R.drawable.bus4),
                 contentDescription ="" ,
                 modifier = Modifier.size(100.dp))
 
@@ -85,7 +86,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.collection),
+                                painter = painterResource(id = R.drawable.bus3),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -104,7 +105,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.electronics),
+                                painter = painterResource(id = R.drawable.bus2),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -126,7 +127,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.home),
+                                painter = painterResource(id = R.drawable.bus3),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -142,7 +143,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.attt4),
+                                painter = painterResource(id = R.drawable.bus4),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -165,7 +166,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.electronics),
+                                painter = painterResource(id = R.drawable.bus1),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -181,7 +182,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.grocery),
+                                painter = painterResource(id = R.drawable.bus3),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
