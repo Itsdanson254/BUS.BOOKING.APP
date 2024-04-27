@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -40,18 +41,28 @@ fun SplashScreen(navController: NavHostController){
         }
 
 
-        Image(painter = painterResource(id = com.example.danson.R.drawable.bus1),
+
+
+        Image(painter = painterResource(id =com.example.danson.R.drawable.tm16),
             contentDescription = "",
-            modifier = Modifier.size(200.dp))
+            modifier = Modifier
+                .size(460.dp))
+
+
+
+        Image(painter = painterResource(id =com.example.danson.R.drawable.tm16),
+            contentDescription = "",
+            modifier = Modifier
+                .size(460.dp))
 
         Text(
-            text = "AMAZON",
-            fontSize = 50.sp,
+            text = "TAHMEED COACH",
+            fontSize = 40.sp,
             fontWeight = FontWeight.ExtraBold,
             modifier = Modifier.padding(start = 5.dp, end = 5.dp))
 
         Text(
-            text = "THE MOST RELIABLE SHOPPING APP",
+            text = "THE MOST RELIABLE BOOKING APP",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(start = 5.dp, end = 5.dp))

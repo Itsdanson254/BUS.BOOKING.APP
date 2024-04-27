@@ -43,7 +43,7 @@ fun DashboardScreen(navController: NavHostController) {
 
         //topappbar
         TopAppBar(
-            title = { Text(text = "Amazon Shop") },
+            title = { Text(text = "TAHMEED BOOKING") },
             backgroundColor = Blue1
         )
         //end of topappbar
@@ -52,17 +52,20 @@ fun DashboardScreen(navController: NavHostController) {
 
         Row (modifier = Modifier.padding(start = 20.dp)){
 
+            Image(
+                painter = painterResource(id = R.drawable.tm10),
+                contentDescription ="" ,
+                modifier = Modifier.size(200.dp))
+
+            Spacer(modifier = Modifier.width(30.dp))
+
             Column {
-                Text(text = "Amazon", fontSize = 35.sp, color = Blue1, fontWeight = FontWeight.ExtraBold, fontFamily = FontFamily.Serif)
-                Text(text = "Shop from A to Z", fontSize = 15.sp)
+                Text(text = "TAHMEED", fontSize =27.sp, color = Blue1, fontWeight = FontWeight.ExtraBold, fontFamily = FontFamily.Serif)
+                Text(text = "BOOK YOUR DESTINATION", fontSize = 10.sp)
             }
 
-            Spacer(modifier = Modifier.width(80.dp))
+            Spacer(modifier = Modifier.width(30.dp))
 
-            Image(
-                painter = painterResource(id = R.drawable.bus4),
-                contentDescription ="" ,
-                modifier = Modifier.size(100.dp))
 
         }
         //end of row
@@ -86,11 +89,11 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus3),
+                                painter = painterResource(id = R.drawable.bus10),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
-                        Text(text = "Clothing",
+                        Text(text = "NAIROBI BOOKING STATION",
                             fontSize = 15.sp,
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center)
@@ -109,7 +112,7 @@ fun DashboardScreen(navController: NavHostController) {
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
-                        Text(text = "Electronics",
+                        Text(text = "NAKURU BOOKING STATION",
                             fontSize = 15.sp,
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center)
@@ -127,11 +130,11 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus3),
+                                painter = painterResource(id = R.drawable.tm19),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
-                        Text(text = "Home",
+                        Text(text = "KISUMU BOOKING STATION",
                             fontSize = 15.sp,
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center)
@@ -143,11 +146,11 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus4),
+                                painter = painterResource(id = R.drawable.tm13),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
-                        Text(text = "Beauty",
+                        Text(text = "MOMBASA BOOKING STATION",
                             fontSize = 15.sp,
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center)
@@ -166,11 +169,11 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus1),
+                                painter = painterResource(id = R.drawable.bus33),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
-                        Text(text = "Pharmacy",
+                        Text(text = " MALINDI BOOKING STATION",
                             fontSize = 15.sp,
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center)
@@ -182,11 +185,11 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus3),
+                                painter = painterResource(id = R.drawable.bs1),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
-                        Text(text = "Groceries",
+                        Text(text = "NAIVASHA BOOKING STATION",
                             fontSize = 15.sp,
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center)

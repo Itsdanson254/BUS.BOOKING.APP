@@ -55,7 +55,7 @@ fun ClothingScreen(navController: NavHostController) {
         ) {
             val mContext = LocalContext.current
             Image(
-                painter = painterResource(id = R.drawable.bus3),
+                painter = painterResource(id = R.drawable.bus33),
                 contentDescription = "",
                 modifier = Modifier
                     .clickable {
@@ -147,7 +147,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.bus3),
+                                painter = painterResource(id = R.drawable.bus33),
                                 contentDescription = "Sweater",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
@@ -258,7 +258,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.bus4),
+                                painter = painterResource(id = R.drawable.bus44),
                                 contentDescription = "dress",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
@@ -368,7 +368,7 @@ fun ClothingScreen(navController: NavHostController) {
                         )
                         {
                             Image(
-                                painter = painterResource(id = R.drawable.bus4),
+                                painter = painterResource(id = R.drawable.bus44),
                                 contentDescription = "Suit",
                                 modifier = Modifier.fillMaxSize(),
                                 contentScale = ContentScale.Crop
