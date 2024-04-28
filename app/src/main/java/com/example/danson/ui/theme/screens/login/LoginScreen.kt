@@ -14,6 +14,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.TextFieldValue
@@ -29,7 +30,9 @@ import com.example.danson.navigation.ROUT_SIGNUP
 fun LoginScreen(navController: NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize()
-        , horizontalAlignment = Alignment.CenterHorizontally,) {
+        .paint(painterResource(id = R.drawable.tm16), contentScale = ContentScale.FillBounds)
+         horizontalAlignment = Alignment.CenterHorizontally)
+    {
 
         Image(painter = painterResource(id = R.drawable.tm9),
             contentDescription = "TAHMEED COACH",
@@ -37,6 +40,17 @@ fun LoginScreen(navController: NavHostController) {
                 .size(90.dp)
                 .padding(start = 10.dp, top = 10.dp)
                 .clip(shape = CircleShape),)
+
+
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .paint(
+                painterResource(id = R.drawable.bcgrd),
+                contentScale = ContentScale.FillBounds
+            )
+        )
+
+
 
         Image(painter = painterResource(id = R.drawable.tm16),
             contentDescription = "",

@@ -34,6 +34,22 @@ fun SignupScreen(navController: NavHostController) {
 
         OutlinedTextField(value = password , onValueChange = {password=it})
 
+
+        //CENTERING AN IMAGE
+        Box  (modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center){
+            Image(painter = painterResource(id = R.drawable.tm9) ,
+                contentDescription = "Tahmeed Icon",
+                modifier = Modifier.size(200.dp)
+                    .clip(shape = CircleShape),
+                contentScale = ContentScale.Crop
+            )
+        }
+
+
+
+
+
         Image(painter = painterResource(id = R.drawable.tm16),
             contentDescription = "",
             modifier = Modifier
