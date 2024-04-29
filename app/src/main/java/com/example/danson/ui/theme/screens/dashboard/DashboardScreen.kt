@@ -50,21 +50,21 @@ fun DashboardScreen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.height(30.dp))
 
-        Row (modifier = Modifier.padding(start = 20.dp)){
+        Row (modifier = Modifier.padding(start = 1.dp)){
 
             Image(
                 painter = painterResource(id = R.drawable.tm10),
                 contentDescription ="" ,
-                modifier = Modifier.size(200.dp))
+                modifier = Modifier.size(180.dp))
 
-            Spacer(modifier = Modifier.width(30.dp))
+            Spacer(modifier = Modifier.width(12.dp))
 
             Column {
-                Text(text = "TAHMEED", fontSize =27.sp, color = Blue1, fontWeight = FontWeight.ExtraBold, fontFamily = FontFamily.Serif)
-                Text(text = "BOOK YOUR DESTINATION", fontSize = 10.sp)
+                Text(text = "TAHMEED", fontSize =26.sp, color = Blue1, fontWeight = FontWeight.ExtraBold, fontFamily = FontFamily.Serif)
+                Text(text = "BOOK YOUR DESTINATION", fontSize = 13.sp)
             }
 
-            Spacer(modifier = Modifier.width(30.dp))
+            Spacer(modifier = Modifier.width(20.dp))
 
 
         }
@@ -81,7 +81,7 @@ fun DashboardScreen(navController: NavHostController) {
                     //CODE FOR NAVIGATION FROM DASHBOARD
                     .clickable {
                         navController.navigate(ROUT_CLOTHING)
-                        Toast.makeText(mContext,"Go to clothing screen !",
+                        Toast.makeText(mContext,"GOING TO BOOKING!",
                             Toast.LENGTH_SHORT).show()
                     })
                 //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
