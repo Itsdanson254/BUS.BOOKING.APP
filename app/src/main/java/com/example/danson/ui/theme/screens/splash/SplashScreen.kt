@@ -40,16 +40,6 @@ fun SplashScreen(navController: NavHostController){
             navController.navigate(ROUT_DASHBOARD)
         }
 
-
-
-
-        Image(painter = painterResource(id =com.example.danson.R.drawable.tm16),
-            contentDescription = "",
-            modifier = Modifier
-                .size(460.dp))
-
-
-
         Image(painter = painterResource(id =com.example.danson.R.drawable.tm16),
             contentDescription = "",
             modifier = Modifier
