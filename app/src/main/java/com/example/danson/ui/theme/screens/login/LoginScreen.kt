@@ -1,9 +1,11 @@
 package com.example.danson.ui.theme.screens.login
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -12,6 +14,7 @@ import androidx.compose.material.Button
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.paint
@@ -35,23 +38,19 @@ fun LoginScreen(navController: NavHostController) {
        )
     {
 
-        Image(painter = painterResource(id = R.drawable.tm9),
-            contentDescription = "TAHMEED COACH",
-            modifier = Modifier
-                .size(90.dp)
-                .padding(start = 10.dp, top = 10.dp)
-                .clip(shape = CircleShape),)
 
-
-
-
-
-        Image(painter = painterResource(id = R.drawable.tm16),
-            contentDescription = "",
-            modifier = Modifier.size(480.dp))
+        //CENTERING AN IMAGE
+        Box  (modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center){
+            Image(painter = painterResource(id = R.drawable.tm9) ,
+                contentDescription = "Technology",
+                modifier = Modifier.size(200.dp)
+                    .clip(shape = CircleShape),
+                contentScale = ContentScale.Crop
+            )
+        }
 
         Text(text = "Login here")
-
         var email by remember { mutableStateOf(TextFieldValue("")) }
         var password by remember { mutableStateOf(TextFieldValue("")) }
         var context = LocalContext.current

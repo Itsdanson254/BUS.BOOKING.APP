@@ -14,6 +14,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.R
+import androidx.compose.ui.draw.paint
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -30,21 +32,19 @@ import kotlinx.coroutines.launch
 fun SplashScreen(navController: NavHostController){
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .paint(painterResource(id = com.example.danson.R.drawable.tm16), contentScale = ContentScale.FillBounds)
+
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
 
         val coroutine = rememberCoroutineScope()
         coroutine.launch {
-            delay(2000)
+            delay(5000)
             navController.navigate(ROUT_DASHBOARD)
         }
-
-        Image(painter = painterResource(id =com.example.danson.R.drawable.tm16),
-            contentDescription = "",
-            modifier = Modifier
-                .size(460.dp))
-
         Text(
             text = "TAHMEED COACH",
             fontSize = 40.sp,

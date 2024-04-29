@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/busicon1"
+        android:icon="@drawable/tm9"
         android:label="MVVM INTERFACE"
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebasestorage"

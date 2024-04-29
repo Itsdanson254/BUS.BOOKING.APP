@@ -45,7 +45,7 @@ fun SignupScreen(navController: NavHostController) {
             contentAlignment = Alignment.Center){
             Image(painter = painterResource(id = R.drawable.tm9) ,
                 contentDescription = "Tahmeed Icon",
-                modifier = Modifier.size(200.dp)
+                modifier = Modifier.size(150.dp)
                     .clip(shape = CircleShape),
                 contentScale = ContentScale.Crop
             )
