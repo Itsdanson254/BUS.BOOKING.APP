@@ -34,6 +34,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.danson.InsertActivity
 import com.example.danson.R
 import com.example.danson.navigation.ROUT_CLOTHING
+import com.example.danson.navigation.ROUT_KISUMU
+import com.example.danson.navigation.ROUT_NAKURU
 import com.example.danson.ui.theme.Blue1
 
 @Composable
@@ -101,10 +103,17 @@ fun DashboardScreen(navController: NavHostController) {
                 }
                 Spacer(modifier = Modifier.width(20.dp))
                 val context= LocalContext.current
-                Card(modifier = Modifier
-                    .clickable { mContext.startActivity(Intent(mContext,InsertActivity::class.java))
-                    }
-                    .size(width = 150.dp, height = 100.dp)) {
+                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
+
+                    //CODE FOR NAVIGATION FROM DASHBOARD
+                    .clickable {
+                        navController.navigate(ROUT_NAKURU)
+                        Toast.makeText(mContext,"HEADING FOR BOOKING!",
+                            Toast.LENGTH_SHORT).show()
+                    })
+                //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
+
+                {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
@@ -124,9 +133,13 @@ fun DashboardScreen(navController: NavHostController) {
             //end of row
 
             Spacer(modifier = Modifier.height(30.dp))
-
             Row {
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)) {
+                val context= LocalContext.current
+                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
+
+                )
+
+                {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(

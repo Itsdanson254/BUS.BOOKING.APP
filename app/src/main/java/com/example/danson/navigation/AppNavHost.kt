@@ -60,5 +60,51 @@ fun AppNavHost(modifier: Modifier = Modifier, navController:NavHostController = 
           NairobiBookingScreen(navController)
         }
 
+        composable(ROUT_NAKURU){
+            NairobiBookingScreen(navController)
+        }
+
+        composable(ROUT_KISUMU){
+            NairobiBookingScreen(navController)
+        }
+
+        composable(ROUT_MOMBASA){
+            NairobiBookingScreen(navController)
+        }
+
+        composable(ROUT_MALINDI){
+            NairobiBookingScreen(navController)
+        }
+
+        composable(ROUT_NAIVASHA){
+            NairobiBookingScreen(navController)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
