@@ -81,7 +81,7 @@ fun DashboardScreen(navController: NavHostController) {
                     //CODE FOR NAVIGATION FROM DASHBOARD
                     .clickable {
                         navController.navigate(ROUT_CLOTHING)
-                        Toast.makeText(mContext,"GOING TO BOOKING!",
+                        Toast.makeText(mContext,"HEADING FOR BOOKING!",
                             Toast.LENGTH_SHORT).show()
                     })
                 //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
@@ -89,7 +89,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus10),
+                                painter = painterResource(id = R.drawable.tmnairobi),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -108,7 +108,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus2),
+                                painter = painterResource(id = R.drawable.tmnakuru),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -130,7 +130,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.tm19),
+                                painter = painterResource(id = R.drawable.tmkm),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -146,7 +146,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.tm13),
+                                painter = painterResource(id = R.drawable.tmmombasa),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -169,7 +169,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bus33),
+                                painter = painterResource(id = R.drawable.tmmalindi),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }
@@ -185,7 +185,7 @@ fun DashboardScreen(navController: NavHostController) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
-                                painter = painterResource(id = R.drawable.bs1),
+                                painter = painterResource(id = R.drawable.tmnaivasha),
                                 contentDescription ="" ,
                                 modifier = Modifier.size(50.dp))
                         }

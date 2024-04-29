@@ -36,7 +36,7 @@ import com.example.danson.R
 import com.example.danson.navigation.ROUT_CLOTHING
 
 @Composable
-fun ClothingScreen(navController: NavHostController) {
+fun NairobiBookingScreen(navController: NavHostController) {
     Column(modifier = Modifier.fillMaxSize()) {
 
         //Top app bar
@@ -406,6 +406,114 @@ fun ClothingScreen(navController: NavHostController) {
             //end row3
 
 
+            Row {
+
+//START OF ROW 4
+                //CARD1
+                Card(
+                    modifier = Modifier
+                        .height(275.dp)
+                        .width(180.dp)
+                ) {
+
+                    Column {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(180.dp),
+                            contentAlignment = Alignment.Center
+                        )
+                        {
+                            Image(
+                                painter = painterResource(id = R.drawable.bus2),
+                                contentDescription = "BUS",
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Crop
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Text(
+                            text = "KDL 224Y",
+                            fontSize = 20.sp,
+                            modifier = Modifier.fillMaxWidth(),
+                            fontWeight = FontWeight.Bold
+
+                        )
+                        Spacer(modifier = Modifier.height(3.dp))
+
+                        Row {
+
+                            Text(text = "Ksh. 2500", textAlign = TextAlign.Center)
+
+                            TextButton(onClick = { val simToolKitLaunchIntent =
+                                mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it)} }, ){
+                                Text(text = "Pay", color = Color.Blue)
+
+                            }
+                        }
+
+                    }
+
+                }
+                //END CARD1
+
+                Spacer(modifier = Modifier.width(15.dp))
+
+                //CARD2
+                Card(
+                    modifier = Modifier
+                        .height(275.dp)
+                        .width(180.dp)
+                ) {
+
+                    Column {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(180.dp),
+                            contentAlignment = Alignment.Center
+                        )
+                        {
+                            Image(
+                                painter = painterResource(id = R.drawable.bus66),
+                                contentDescription = "BUS",
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = ContentScale.Crop
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Text(
+                            text = "KDH 334R",
+                            fontSize = 20.sp,
+                            modifier = Modifier.fillMaxWidth(),
+                            fontWeight = FontWeight.Bold
+
+                        )
+                        Spacer(modifier = Modifier.height(3.dp))
+
+                        Row {
+
+                            Text(text = "Ksh. 2500", textAlign = TextAlign.Center)
+
+                            TextButton(onClick = { val simToolKitLaunchIntent =
+                                mContext.packageManager.getLaunchIntentForPackage("com.android.stk")
+                                simToolKitLaunchIntent?.let { mContext.startActivity(it)} },
+                            ) {
+                                Text(text = "Pay", color = Color.Blue)
+
+                            }
+                        }
+
+                    }
+
+                }
+                //END CARD2
+            }
+            //end row4
+
         }
 
 
@@ -414,6 +522,6 @@ fun ClothingScreen(navController: NavHostController) {
 
 @Preview(showBackground = true)
 @Composable
-fun ClothingScreenPreview(){
-    ClothingScreen(rememberNavController())
+fun NairobibookingScreenPreview(){
+    NairobiBookingScreen(rememberNavController())
 }

@@ -6,12 +6,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.danson.ui.theme.screens.Clothing.ClothingScreen
 import com.example.danson.ui.theme.screens.about.AboutScreen
 import com.example.danson.ui.theme.screens.contact.ContactScreen
 import com.example.danson.ui.theme.screens.dashboard.DashboardScreen
 import com.example.danson.ui.theme.screens.home.HomeScreen
 import com.example.danson.ui.theme.screens.login.LoginScreen
+import com.example.danson.ui.theme.screens.nairobibooking.NairobiBookingScreen
 import com.example.danson.ui.theme.screens.services.ServicesScreen
 import com.example.danson.ui.theme.screens.signup.SignupScreen
 import com.example.danson.ui.theme.screens.splash.SplashScreen
@@ -57,7 +57,7 @@ fun AppNavHost(modifier: Modifier = Modifier, navController:NavHostController = 
         }
 
         composable(ROUT_CLOTHING){
-          ClothingScreen(navController)
+          NairobiBookingScreen(navController)
         }
 
     }
