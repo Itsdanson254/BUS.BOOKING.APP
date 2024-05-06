@@ -16,6 +16,9 @@ import com.example.danson.ui.theme.screens.services.ServicesScreen
 import com.example.danson.ui.theme.screens.signup.SignupScreen
 import com.example.danson.ui.theme.screens.splash.SplashScreen
 import com.example.danson.ui.theme.screens.upload.UploadScreen
+import com.example.wazitoecommerce.ui.theme.screens.busforbooking.ViewBusBookedScreen
+import com.example.wazitoecommerce.ui.theme.screens.passenger.AddPassengersScreen
+import com.example.wazitoecommerce.ui.theme.screens.passenger.ViewPassengersScreen
 
 @Composable
 fun AppNavHost(modifier: Modifier = Modifier, navController:NavHostController = rememberNavController(), startDestination:String = ROUT_SPLASH) {
@@ -79,6 +82,23 @@ fun AppNavHost(modifier: Modifier = Modifier, navController:NavHostController = 
         composable(ROUT_NAIVASHA){
             NairobiBookingScreen(navController)
         }
+
+
+        composable(ADD_PASSENGERS_URL){
+            AddPassengersScreen(navController = navController)
+        }
+        composable(VIEW_PASSENGERS_URL){
+            ViewPassengersScreen(navController = navController)
+        }
+
+        composable(ADD_BUSBOOKING_URL){
+            ViewBusBookedScreen(navController = navController)
+        }
+
+        composable(VIEW_BUSBOOKING_URL){
+            ViewBusBookedScreen(navController = navController)
+        }
+
 
 
 

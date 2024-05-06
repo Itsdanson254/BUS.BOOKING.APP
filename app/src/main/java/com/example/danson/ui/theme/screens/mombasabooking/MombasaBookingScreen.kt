@@ -34,6 +34,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.danson.ui.theme.Blue1
 import com.example.danson.R
 import com.example.danson.navigation.ROUT_CLOTHING
+import com.example.danson.navigation.ROUT_MOMBASA
 
 @Composable
 fun NairobiBookingScreen(navController: NavHostController) {
@@ -59,7 +60,7 @@ fun NairobiBookingScreen(navController: NavHostController) {
                 contentDescription = "",
                 modifier = Modifier
                     .clickable {
-                        navController.navigate(ROUT_CLOTHING)
+                        navController.navigate(ROUT_MOMBASA)
                         Toast.makeText(mContext,"Go to winter collection !",
                             Toast.LENGTH_SHORT).show() }
                     .fillMaxSize(),

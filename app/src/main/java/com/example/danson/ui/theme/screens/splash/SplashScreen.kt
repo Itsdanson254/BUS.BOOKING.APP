@@ -33,9 +33,8 @@ fun SplashScreen(navController: NavHostController){
 
     Column(
         modifier = Modifier
-            .fillMaxSize()
+            .size(750.dp)
             .paint(painterResource(id = com.example.danson.R.drawable.tm16), contentScale = ContentScale.FillBounds)
-
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {

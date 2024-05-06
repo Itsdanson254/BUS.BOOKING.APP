@@ -78,7 +78,8 @@ fun DashboardScreen(navController: NavHostController) {
 
             Row {
                 val mContext = LocalContext.current
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
+                Card(modifier = Modifier
+                    .size(width = 150.dp, height = 100.dp)
 
                     //CODE FOR NAVIGATION FROM DASHBOARD
                     .clickable {
@@ -135,8 +136,8 @@ fun DashboardScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(30.dp))
             Row {
                 val context= LocalContext.current
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
-
+                Card(modifier = Modifier
+                    .size(width = 150.dp, height = 100.dp)
                 )
 
                 {
@@ -155,7 +156,9 @@ fun DashboardScreen(navController: NavHostController) {
                 }
                 Spacer(modifier = Modifier.width(20.dp))
 
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)) {
+                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
+
+                ) {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(

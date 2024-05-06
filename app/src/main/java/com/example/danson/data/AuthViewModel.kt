@@ -1,44 +1,62 @@
 package com.example.danson.data
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.widget.Toast
 import androidx.navigation.NavHostController
-import com.example.danson.navigation.ROUT_LOGIN
-import com.example.danson.navigation.ROUT_UPLOAD
+import com.example.danson.models.PassengerUser
+import com.example.danson.navigation.HOME_URL
+import com.example.danson.navigation.LOGIN_URL
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class AuthViewModel(var navController:NavHostController, var context:Context) {
-    var mAuth:FirebaseAuth
+    val mAuth:FirebaseAuth
+    val progress:ProgressDialog
+
     init {
         mAuth = FirebaseAuth.getInstance()
+        progress = ProgressDialog(context)
+        progress.setTitle("Loading")
+        progress.setMessage("Please wait...")
     }
-    fun signup(email:String, password:String){
-        Toast.makeText(context, "Clicked $email", Toast.LENGTH_SHORT).show()
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
-            if (it.isSuccessful){
-                Toast.makeText(context, "Register successful", Toast.LENGTH_SHORT).show()
-                navController.navigate(ROUT_UPLOAD)
-            }else{
-                Toast.makeText(context, "${it.exception!!.message}", Toast.LENGTH_SHORT).show()
+    fun signup(name: String, email: String){
+        progress.show()
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+            var userId = mAuth.currentUser!!.uid
+            var passengerUserProfile = PassengerUser(name, email, password, userId)
+            // Create a reference table called Users inside of the Firebase database
+            var usersRef = FirebaseDatabase.getInstance().getReference()
+                                    .child("Users/$userId")
+            usersRef.setValue(passengerUserProfile).addOnCompleteListener {
+                progress.dismiss()
+                if (it.isSuccessful){
+                    Toast.makeText(this.context, "Success", Toast.LENGTH_SHORT).show()
+                    navController.navigate(LOGIN_URL)
+                }else{
+                    Toast.makeText(this.context, "Error", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
 
-    fun login(email:String, password:String){
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
+    fun login(email: String, password: String){
+        progress.show()
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+            progress.dismiss()
             if (it.isSuccessful){
-                Toast.makeText(context, "Login successful", Toast.LENGTH_SHORT).show()
-                navController.navigate(ROUT_UPLOAD)
+                Toast.makeText(this.context, "Success", Toast.LENGTH_SHORT).show()
+                navController.navigate(HOME_URL)
+            }else{
+                Toast.makeText(this.context, "Error", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     fun logout(){
         mAuth.signOut()
-        navController.navigate(ROUT_LOGIN)
+        navController.navigate(LOGIN_URL)
     }
 
-    fun isLoggedIn():Boolean{
-        return mAuth.currentUser != null
-    }
+    fun isLoggedIn(): Boolean = mAuth.currentUser != null
 }
