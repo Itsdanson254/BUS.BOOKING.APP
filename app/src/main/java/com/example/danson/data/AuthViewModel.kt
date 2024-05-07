@@ -20,7 +20,7 @@ class AuthViewModel(var navController:NavHostController, var context:Context) {
         progress.setTitle("Loading")
         progress.setMessage("Please wait...")
     }
-    fun signup(name: String, email: String){
+    fun signup(name: String, email: String, password: String){
         progress.show()
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
             var userId = mAuth.currentUser!!.uid

@@ -1,7 +1,6 @@
 package com.example.danson.ui.theme.screens.dashboard
 
 
-import android.content.Intent
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -31,10 +30,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.danson.InsertActivity
 import com.example.danson.R
 import com.example.danson.navigation.ROUT_CLOTHING
 import com.example.danson.navigation.ROUT_KISUMU
+import com.example.danson.navigation.ROUT_MALINDI
+import com.example.danson.navigation.ROUT_MOMBASA
+import com.example.danson.navigation.ROUT_NAIVASHA
 import com.example.danson.navigation.ROUT_NAKURU
 import com.example.danson.ui.theme.Blue1
 
@@ -104,8 +105,8 @@ fun DashboardScreen(navController: NavHostController) {
                 }
                 Spacer(modifier = Modifier.width(20.dp))
                 val context= LocalContext.current
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
-
+                Card(modifier = Modifier
+                    .size(width = 150.dp, height = 100.dp)
                     //CODE FOR NAVIGATION FROM DASHBOARD
                     .clickable {
                         navController.navigate(ROUT_NAKURU)
@@ -135,10 +136,16 @@ fun DashboardScreen(navController: NavHostController) {
 
             Spacer(modifier = Modifier.height(30.dp))
             Row {
-                val context= LocalContext.current
+                val mContext= LocalContext.current
                 Card(modifier = Modifier
                     .size(width = 150.dp, height = 100.dp)
-                )
+                    //CODE FOR NAVIGATION FROM DASHBOARD
+                    .clickable {
+                        navController.navigate(ROUT_KISUMU)
+                        Toast.makeText(mContext,"HEADING FOR BOOKING!",
+                            Toast.LENGTH_SHORT).show()
+                    })
+                //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
 
                 {
                     Column {
@@ -156,9 +163,16 @@ fun DashboardScreen(navController: NavHostController) {
                 }
                 Spacer(modifier = Modifier.width(20.dp))
 
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
-
-                ) {
+                Card(modifier = Modifier
+                    .size(width = 150.dp, height = 100.dp)
+                    //CODE FOR NAVIGATION FROM DASHBOARD
+                    .clickable {
+                        navController.navigate(ROUT_MOMBASA)
+                        Toast.makeText(mContext,"HEADING FOR BOOKING!",
+                            Toast.LENGTH_SHORT).show()
+                    })
+                //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
+                {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
@@ -178,10 +192,19 @@ fun DashboardScreen(navController: NavHostController) {
             //end of row
 
             Spacer(modifier = Modifier.height(30.dp))
-
-
             Row {
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)) {
+                val mContext = LocalContext.current
+                Card(modifier = Modifier
+                    .size(width = 150.dp, height = 100.dp)
+                    //CODE FOR NAVIGATION FROM DASHBOARD
+                    .clickable {
+                        navController.navigate(ROUT_MALINDI)
+                        Toast.makeText(mContext,"HEADING FOR BOOKING!",
+                            Toast.LENGTH_SHORT).show()
+                    })
+                //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
+
+                    {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(
@@ -196,8 +219,18 @@ fun DashboardScreen(navController: NavHostController) {
                     }
                 }
                 Spacer(modifier = Modifier.width(20.dp))
+                val MContext = LocalContext.current
+                Card(modifier = Modifier
+                    .size(width = 150.dp, height = 100.dp)
+                    //CODE FOR NAVIGATION FROM DASHBOARD
+                    .clickable {
+                        navController.navigate(ROUT_NAIVASHA)
+                        Toast.makeText(MContext,"HEADING FOR BOOKING!",
+                            Toast.LENGTH_SHORT).show()
+                    })
+                //END OF CODE FOR NAVIGATION TO RESPECTIVE SCREEN
 
-                Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)) {
+                {
                     Column {
                         Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             Image(

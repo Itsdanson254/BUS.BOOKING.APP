@@ -53,6 +53,7 @@ fun NairobiBookingScreen(navController: NavHostController) {
                 .height(150.dp),
             contentAlignment = Alignment.Center
         ) {
+
             val mContext = LocalContext.current
             Image(
                 painter = painterResource(id = R.drawable.bus3),

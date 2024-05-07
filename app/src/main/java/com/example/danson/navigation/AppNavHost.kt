@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.danson.ui.theme.screens.about.AboutScreen
+import com.example.danson.ui.theme.screens.busforbooking.ViewBusBookedScreen
 import com.example.danson.ui.theme.screens.contact.ContactScreen
 import com.example.danson.ui.theme.screens.dashboard.DashboardScreen
 import com.example.danson.ui.theme.screens.home.HomeScreen
@@ -16,7 +17,6 @@ import com.example.danson.ui.theme.screens.services.ServicesScreen
 import com.example.danson.ui.theme.screens.signup.SignupScreen
 import com.example.danson.ui.theme.screens.splash.SplashScreen
 import com.example.danson.ui.theme.screens.upload.UploadScreen
-import com.example.wazitoecommerce.ui.theme.screens.busforbooking.ViewBusBookedScreen
 import com.example.wazitoecommerce.ui.theme.screens.passenger.AddPassengersScreen
 import com.example.wazitoecommerce.ui.theme.screens.passenger.ViewPassengersScreen
 

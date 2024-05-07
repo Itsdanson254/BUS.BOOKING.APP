@@ -1,12 +1,10 @@
 package com.example.wazitoecommerce.ui.theme.screens.passenger
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
@@ -25,10 +23,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import coil.compose.rememberAsyncImagePainter
-import com.example.wazitoecommerce.data.PassengerViewModel
-import com.example.wazitoecommerce.models.Passenger
-import com.example.wazitoecommerce.ui.theme.WazitoECommerceTheme
+import com.example.danson.data.PassengerViewModel
+import com.example.danson.models.Passenger
+import com.example.danson.ui.theme.FirebasestorageTheme
 
 @Composable
 fun ViewPassengersScreen(navController:NavHostController) {
@@ -84,11 +81,7 @@ fun PassengerItem(name:String, destination:String, fare:String, id:String,
         Text(text = name)
         Text(text = destination)
         Text(text = fare)
-        Image(
-            painter = rememberAsyncImagePainter(passengerImage),
-            contentDescription = null,
-            modifier = Modifier.size(250.dp)
-        )
+
         Button(onClick = {
             passengerRepository.deleteProduct(id)
         }) {
@@ -105,7 +98,7 @@ fun PassengerItem(name:String, destination:String, fare:String, id:String,
 @Composable
 @Preview(showBackground = true)
 fun ViewPassengersScreenPreview(){
-    WazitoECommerceTheme {
+    FirebasestorageTheme {
         ViewPassengersScreen(navController = rememberNavController())
     }
 }

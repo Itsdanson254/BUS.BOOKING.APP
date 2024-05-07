@@ -59,7 +59,7 @@ fun SignupScreen(navController: NavHostController) {
         Button(onClick = {
             // HANDLE SIGNUP LOGIC //
             var xyz = AuthViewModel(navController, context)
-            xyz.signup(email.text.trim(),password.text.trim())
+            xyz.signup(email.text.trim(), password.text.trim(),)
 
         }) {
             Text(text = "Signup")
